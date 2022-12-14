@@ -1,0 +1,71 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "GCC Compiler",
+			"command": "W:\\env\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-std=c++11",
+				"-fdiagnostics-color=always",
+				"-g",
+				// "${file}",
+				"${workspaceFolder}\\*.cpp",
+				"-o",
+				// "${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${workspaceFolder}\\main.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: W:\\env\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Clang Compiler",
+			"command": "W:\\env\\mingw64\\bin\\clang++.exe",
+			"args": [
+				"-std=c++11",
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g",
+				"${workspaceFolder}\\*.cpp",
+				"-o",
+				"${workspaceFolder}\\main.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: W:\\env\\mingw64\\bin\\clang++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "MSVC Compiler",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/std:c++latest",
+				"/EHsc",
+				"/nologo",
+				"${workspaceFolder}\\*.cpp",
+				"/Fe${workspaceFolder}\\main.exe",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
